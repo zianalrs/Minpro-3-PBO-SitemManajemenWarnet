@@ -30,7 +30,7 @@ Data program disimpan menggunakan `ArrayList` selama program berjalan. Ketika pr
 
 Program dibagi menjadi enam package berdasarkan fungsi masing-masing, dengan mengacu pada struktur MVC (Model, View, Controller).
 
-<img width="300" height="403" alt="image" src="https://github.com/user-attachments/assets/234e307d-88f0-45cb-a7cf-2fc937b4fbd8" />
+<img width="300" height="403" alt="Screenshot 2026-10-08 202021" src="https://github.com/user-attachments/assets/bfff7f09-3ce7-45d0-b86c-22fcb2b4ae4d" />
 
 ### 1. Package Model
 
@@ -72,7 +72,7 @@ Package `Main` berisi class `Warnet` yang merupakan entry point dari program. Cl
 
 Program dimulai dengan menjalankan class `Warnet`, yang membuat objek `Controller` lalu memanggil method `jalankan()`. Setelah itu sistem menampilkan menu utama yang berisi pilihan untuk melihat komputer, melakukan booking, melihat riwayat transaksi, mengelola komputer, dan keluar dari program.
 
-<img width="247" height="202" alt="image" src="https://github.com/user-attachments/assets/b6f96823-02bc-46b7-8ccd-d84c13eb8888" />
+<img width="247" height="202" alt="Screenshot 2026-10-08 202134" src="https://github.com/user-attachments/assets/917171ac-e581-48db-a04c-c15419149446" />
 
 User memilih menu dengan memasukkan angka sesuai pilihan. Program menggunakan perulangan `while` sehingga menu utama akan terus ditampilkan sampai user memilih menu keluar, dan setiap pilihan diproses menggunakan `switch-case`. Seluruh input dibaca lewat class `Validasi`, sehingga jika user memasukkan huruf pada input angka, program tidak berhenti dan meminta user mengulang input.
 
@@ -82,7 +82,7 @@ User memilih menu dengan memasukkan angka sesuai pilihan. Program menggunakan pe
 
 Menu **Lihat Komputer** digunakan untuk menampilkan seluruh data komputer yang tersedia pada warnet. Program memanggil `KomputerService`, menelusuri `ArrayList` dengan perulangan `for`, lalu menampilkan informasi setiap komputer yang meliputi nomor, kategori, spesifikasi, harga per jam, dan status. Untuk komputer VIP, ditampilkan juga fasilitas tambahannya.
 
-<img width="470" height="267" alt="image" src="https://github.com/user-attachments/assets/3a95179c-e744-44e0-ba18-755194cc2bdd" />
+<img width="470" height="267" alt="Screenshot 2026-10-08 202205" src="https://github.com/user-attachments/assets/f6f617d7-1046-440f-90b3-0620bff9532b" />
 
 ---
 
@@ -98,7 +98,9 @@ Menu **Booking Komputer** digunakan untuk melakukan penyewaan komputer oleh pela
 ```text
 Total Bayar = Durasi × Harga per Jam
 ```
-<img width="423" height="117" alt="image" src="https://github.com/user-attachments/assets/67cd462b-0ee0-49cd-864f-c2e9e97d317c" />
+
+<img width="423" height="117" alt="Screenshot 2026-10-08 202254" src="https://github.com/user-attachments/assets/20121a89-d029-4475-9ad8-59abf8e2b27f" />
+
 
 Setelah proses berhasil, status komputer berubah menjadi sedang dipakai dan transaksi disimpan ke dalam `TransaksiService`.
 
@@ -106,7 +108,7 @@ Setelah proses berhasil, status komputer berubah menjadi sedang dipakai dan tran
 
 ### 3. Riwayat Transaksi
 
-<img width="248" height="119" alt="image" src="https://github.com/user-attachments/assets/18835304-7353-43fd-a751-070d3bdcd599" />
+<img width="248" height="119" alt="Screenshot 2026-10-08 202326" src="https://github.com/user-attachments/assets/b6dab1c4-911d-4f6e-a2aa-4d472ec706e2" />
 
 Menu **Riwayat Transaksi** digunakan untuk melihat seluruh transaksi booking yang telah dilakukan, meliputi ID transaksi, nama pelanggan, nomor komputer, durasi penggunaan, dan total pembayaran. Jika belum ada transaksi, program menampilkan pesan bahwa belum ada transaksi.
 
@@ -114,37 +116,39 @@ Menu **Riwayat Transaksi** digunakan untuk melihat seluruh transaksi booking yan
 
 ### 4. Kelola Komputer
 
-<img width="244" height="202" alt="image" src="https://github.com/user-attachments/assets/683d41d5-2986-4888-a68b-33ad94ed2393" />
+<img width="244" height="202" alt="Screenshot 2026-10-08 202355" src="https://github.com/user-attachments/assets/0574caa4-1a8e-48cb-bcaf-9cdbabf1f925" />
 
 Menu **Kelola Komputer** membuka submenu dengan perulangannya sendiri, berisi lima pilihan: Tambah Komputer, Ubah Data Komputer, Hapus Komputer, Kosongkan Komputer, dan Kembali ke menu utama. Pilihan Ubah, Hapus, dan Kosongkan ditolak dengan pesan yang jelas jika data komputer masih kosong.
 
 #### 4.1 Tambah Komputer
 
-<img width="486" height="138" alt="image" src="https://github.com/user-attachments/assets/af54a977-cf48-4f71-a2eb-90a5937e9e1a" />
+<img width="486" height="138" alt="Screenshot 2026-10-08 202645" src="https://github.com/user-attachments/assets/abaafd66-fc20-4ed5-8996-131238285b83" />
 
 User memasukkan nomor komputer, spesifikasi, dan memilih kategori Reguler atau VIP. Harga per jam tidak diinput manual karena sudah ditentukan oleh kategori. Jika nomor komputer sudah digunakan, komputer baru tidak dapat ditambahkan dengan nomor yang sama.
 
 #### 4.2 Ubah Data Komputer
 
-<img width="504" height="57" alt="image" src="https://github.com/user-attachments/assets/54364604-11a0-4961-95d4-9a2b8620a6bf" />
+<img width="504" height="57" alt="Screenshot 2026-10-08 203002" src="https://github.com/user-attachments/assets/fac1f5de-6062-4df5-8085-04fba5ef7d07" />
 
 User memasukkan nomor komputer yang ingin diubah, lalu memasukkan spesifikasi baru. Jika nomor ditemukan, spesifikasi diperbarui; jika tidak, program menampilkan pesan bahwa komputer tidak ditemukan.
 
 #### 4.3 Hapus Komputer
 
-<img width="411" height="36" alt="image" src="https://github.com/user-attachments/assets/9cfc4fb3-3b3a-4541-b7a2-2c26ab0ad7b1" />
+<img width="411" height="36" alt="Screenshot 2026-10-08 203025" src="https://github.com/user-attachments/assets/206f9a5c-135c-4229-bec8-a5d9c7661f4a" />
 
 User memasukkan nomor komputer yang ingin dihapus. Jika komputer ditemukan, datanya dihapus dari `ArrayList`.
 
 #### 4.4 Kosongkan Komputer
 
-<img width="457" height="39" alt="image" src="https://github.com/user-attachments/assets/22d83a8d-1137-4da8-b26e-dfb2f9bfa6c4" />
+<img width="457" height="39" alt="Screenshot 2026-10-08 203044" src="https://github.com/user-attachments/assets/5fc8f86a-8996-4db7-b439-c33c8985c6fc" />
 
 User memasukkan nomor komputer yang ingin dikosongkan. Jika komputer sedang dipakai, statusnya diubah kembali menjadi kosong sehingga bisa dibooking lagi. Jika komputer memang sudah kosong, program memberi tahu hal tersebut.
 
 ---
 
 ### 5. Keluar Program
+
+<img width="415" height="227" alt="image" src="https://github.com/user-attachments/assets/9488698c-a227-446f-a5eb-973e7f643e06" />
 
 Menu **Keluar** menghentikan perulangan `while` pada menu utama sehingga program selesai dijalankan.
 
